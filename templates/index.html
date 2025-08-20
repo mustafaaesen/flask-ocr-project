@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>OCR - Görselden Metin Tanıma</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Görselden Metin Tanıma</h1>
+        
+        <form id="uploadForm">
+                <input type="file" id="imageInput" name="image" accept="image/*" capture="environment" required>
+                <button type="submit">Görseli Yükle</button>
+        </form>
+
+
+        <div id="loader" class="loader" style="display: none;"></div>
+
+        <div id="result">
+            <h3>🔍 Algılanan Metin:</h3>
+            <pre id="output"></pre>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
